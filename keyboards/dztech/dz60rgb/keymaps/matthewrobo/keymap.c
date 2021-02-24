@@ -52,17 +52,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_______, _______, _______, _______, _______, _______, KC_P0,   KC_P0,   KC_P0,   KC_PDOT, _______,          _______, _______, \
 		_______, _______, _______,                   _______,                   _______, _______,          _______, _______, _______  \
 	),
+//	[_RGB] = LAYOUT(
+//			_______, KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, \
+//			_______, RGB_MOD,  RGB_SPI, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______, MAS_MGT, MAS_BLU, MAS_WHT, RGB_RMOD, RGB_MOD, _______, \
+//			_______, RGB_RMOD, RGB_SPD, RGB_HUD, RGB_SAD, RGB_VAD, _______, MAS_RED, MAS_KEY, MAS_CYN, MAS_PRP, _______, _______,          \
+//			_______, RGB_TOG,  _______, _______, _______, _______, _______, MAS_YEL, MAS_GRN, MAS_CRM, _______,          _______, _V_V_V_, \
+//			_______, _______,  _______,                   _______,                   _______, _______,          _______, _______, _______  \
+//	),
 	[_RGB] = LAYOUT(
 		_______, KC_F1,    KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, \
-		_______, RGB_MOD,  RGB_SPI, RGB_HUI, RGB_SAI, RGB_VAI, _______, _______, MAS_MGT, MAS_BLU, MAS_WHT, RGB_RMOD, RGB_MOD, _______, \
-		_______, RGB_RMOD, RGB_SPD, RGB_HUD, RGB_SAD, RGB_VAD, _______, MAS_RED, MAS_KEY, MAS_CYN, MAS_PRP, _______, _______,          \
-		_______, RGB_TOG,  _______, _______, _______, _______, _______, MAS_YEL, MAS_GRN, MAS_CRM, _______,          _______, _V_V_V_, \
-		_______, _______,  _______,                   _______,                   _______, _______,          _______, _______, _______  \
+		_______, RGB_TOG,  RGB_SPI, RGB_HUI, RGB_HUD, RGB_SAI, RGB_SAD, RGB_VAI, RGB_VAD, RGB_MOD, _______, _______, _______, _______, \
+		_______, rgB_RMOD, RGB_SPD, RGB_MOD, _______, _______, _______, _______, _______, _______, _______, _______, _______,          \
+		_______, _______,  _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______, \
+		_______, _______,  _V_V_V_,                   _______,                   _______, _______,          _______, _______, _______  \
 	),
 	[_FNC] = LAYOUT( // fuck it edition
 		RCTL(KC_ESC),  KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,      KC_F7,      KC_F8,         KC_F9,        KC_F10,        KC_F11,        KC_F12,        KC_ASTG,       \
 		RCTL(KC_TAB),  RCTL(KC_Q), RCTL(KC_W), RCTL(KC_E), RCTL(KC_R), RCTL(KC_T), RCTL(KC_Y), RCTL(KC_U), RCTL(KC_I),    RCTL(KC_O),   RCTL(KC_P),    RCTL(KC_LBRC), RCTL(KC_RBRC), RCTL(KC_BSLS), \
-		RCTL(KC_CAPS), RCTL(KC_A), RCTL(KC_S), RCTL(KC_D), RCTL(KC_F), RCTL(KC_G), RCTL(KC_H), RCTL(KC_J), RCTL(KC_K),    RCTL(KC_L),   RCTL(KC_SCLN), RCTL(KC_QUOT), RCTL(KC_ENT),                 \
+	TL(KC_CAPS), RCTL(KC_A), RCTL(KC_S), RCTL(KC_D), RCTL(KC_F), RCTL(KC_G), RCTL(KC_H), RCTL(KC_J), RCTL(KC_K),    RCTL(KC_L),   RCTL(KC_SCLN), RCTL(KC_QUOT), RCTL(KC_ENT),                 \
+		RCTL(KC_LSFT), RCTL(KC_Z), RCTL(KC_X), RCTL(KC_C), RCTL(KC_V), REBOOT,     RCTL(KC_N), RCTL(KC_M), RCTL(KC_COMM), RCTL(KC_DOT), RCTL(KC_SLSH),                KC_VOLU, RCTL(KC_DEL),        \
+		RCTL(KC_LCTL), RCTL(KC_LGUI), RCTL(KC_LALT),                   RCTL(KC_SPC),                       KC_MUTE,       _V_V_V_,                     RCTL(KC_LEFT), KC_VOLD, RCTL(KC_RGHT)        \
+	),
+	[_FNC] = LAYOUT( // fuck it edition
+		RCTL(KC_ESC),  KC_F1,      KC_F2,      KC_F3,      KC_F4,      KC_F5,      KC_F6,      KC_F7,      KC_F8,         KC_F9,        KC_F10,        KC_F11,        KC_F12,        KC_ASTG,       \
+		RCTL(KC_TAB),  RCTL(KC_Q), RCTL(KC_W), RCTL(KC_E), RCTL(KC_R), RCTL(KC_T), RCTL(KC_Y), RCTL(KC_U), RCTL(KC_I),    RCTL(KC_O),   RCTL(KC_P),    RCTL(KC_LBRC), RCTL(KC_RBRC), RCTL(KC_BSLS), \
+	TL(KC_CAPS), RCTL(KC_A), RCTL(KC_S), RCTL(KC_D), RCTL(KC_F), RCTL(KC_G), RCTL(KC_H), RCTL(KC_J), RCTL(KC_K),    RCTL(KC_L),   RCTL(KC_SCLN), RCTL(KC_QUOT), RCTL(KC_ENT),                 \
 		RCTL(KC_LSFT), RCTL(KC_Z), RCTL(KC_X), RCTL(KC_C), RCTL(KC_V), REBOOT,     RCTL(KC_N), RCTL(KC_M), RCTL(KC_COMM), RCTL(KC_DOT), RCTL(KC_SLSH),                KC_VOLU, RCTL(KC_DEL),        \
 		RCTL(KC_LCTL), RCTL(KC_LGUI), RCTL(KC_LALT),                   RCTL(KC_SPC),                       KC_MUTE,       _V_V_V_,                     RCTL(KC_LEFT), KC_VOLD, RCTL(KC_RGHT)        \
 	),

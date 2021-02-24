@@ -5,7 +5,7 @@
 #define _LAYER3 3
 #define _LAYER4 4
 #define _LAYER5 5
-#define _LAYER6 6
+#define _LAYER7 6
 #define _LAYER7 7
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[_LAYER0] = LAYOUT( /* MAC */
